@@ -12,9 +12,8 @@ building1.Purchase("Owen");
 building2.Purchase("Greg");
 building3.Purchase("Sandy");
 
-List<Building> buildings = new List<Building>()
-{
-    building1, building2, building3
-};
+City city1 = new City("First City");
+city1.AddBuildings(building1, building2, building3);
 
-buildings.ForEach(building => building.DisplayInfo());
+Console.WriteLine($"{city1.Name} containes these buildings:\n");
+city1.Buildings.ForEach(building => building.DisplayInfo());
